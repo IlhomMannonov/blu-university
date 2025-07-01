@@ -3,7 +3,7 @@ version: '3.8'
 services:
   app:
     build: .
-    container_name: admission-university
+    container_name: bxu-university
     ports:
       - "18080:8080"
     env_file:
