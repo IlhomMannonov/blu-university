@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "name_uz": "Akademik litsey",
+    "name_ru": "Akademik litsey",
+    "name_en": "Akademik litsey"
+  },  {
+    "id": 2,
+    "name_uz": "Kasb hunar kolleji",
+    "name_ru": "Kasb hunar kolleji",
+    "name_en": "Kasb hunar kolleji"
+  },  {
+    "id": 3,
+    "name_uz": "Profesional talim",
+    "name_ru": "Profesional talim",
+    "name_en": "Profesional talim"
+  },  {
+    "id": 4,
+    "name_uz": "Maktab",
+    "name_ru": "Maktab",
+    "name_en": "Maktab"
+  },  {
+    "id": 5,
+    "name_uz": "Oliy talim",
+    "name_ru": "Oliy talim",
+    "name_en": "Oliy talim"
+  }
+]

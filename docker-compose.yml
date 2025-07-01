@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: admission-university
+    ports:
+      - "18080:8080"
+    env_file:
+      - .env
+    networks:
+      - shared-net   # ✅ to‘g‘rilandi
+    restart: always
+    volumes:
+      - /root/admission_files:/app/uploads
+
+networks:
+  shared-net:
+    external: true

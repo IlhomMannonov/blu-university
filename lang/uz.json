@@ -1,0 +1,22 @@
+{
+  "user": {
+    "no_user_in_header": "Usersiz kirish mumkun emas",
+    "not_found": "Foydalanuvchi topilmadi",
+    "required_this_statuses": "{statuses} quydagi statuslar mumkun",
+    "updated_status": "Foydalanuvchi statusi={status}",
+    "already_exists": "{number} Bunday foydalanuvchi aval ro'yxatdan o'tgan"
+  },
+  "validation": {
+    "must_have_fields": "Quydagi maydonlar talab qilinadi: "
+  },
+  "sms": {
+    "wrong_code": "Tasdiqlash kodi not'g'ri"
+  },
+  "phone_number_format_invalid": "Telefon raqam formatini noto'g'ri",
+  "password_format_invalid": "Parol kamida 4 ta belgidan iborat bo'lishi lozim",
+  "admission": {
+    "not_found": "Qabul arizasi topilmadi",
+    "no_access_rejecting": "Ariza allaqachon tasdiqlangan",
+    "rejected": "Ariza bekor qilindi"
+  }
+}

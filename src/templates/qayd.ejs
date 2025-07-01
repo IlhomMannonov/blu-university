@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Abituriyent Qayd Varaqasi</title>
+    <style>
+        .container {
+            width: 794px;
+            height: 1123px;
+            background: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        .column {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .section {
+            margin-bottom: 1rem;
+        }
+
+        .head-title {
+            font-weight: 600;
+            font-size: 24px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 2px;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #000;
+        }
+        .row-title {
+            font-style: italic;
+        }
+
+        .info {
+            border-bottom: 2px solid #eee;
+        }
+        .section-title {
+            text-align: center;
+            font-weight: 600;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            background: #ccc;
+        }
+        .info .grid1 {
+            display: grid;
+            grid-template-columns: 2fr 6fr 2fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .photo {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: #ddd;
+            margin-right: 1rem;
+        }
+        .about-item {
+            display: flex;
+        }
+        .about-item .label {
+            width: 200px;
+            display: block;
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+        .about-item .value {
+            width: 250px;
+            display: block;
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+        .about-item .value2 {
+            width: 555px;
+        }
+        .qr-code {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 1rem;
+            background: #ddd;
+        }
+        .edu-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .edu-table th, .edu-table td {
+            border: 1px solid #000;
+            padding: 6px 10px;
+        }
+        .edu-table th {
+            text-align: left;
+        }
+
+        .subs {
+
+        }
+        .subs .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .subs-item {
+            display: flex;
+        }
+        .subs-item .label {
+            width: 100%;
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .subs-item .value {
+            width: 100%;
+            display: block;
+            font-size: 16px;
+        }
+
+        .remem {
+
+        }
+        .remem-item {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .remem-last {
+            text-align: right;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        .remem-last .title {
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: right;
+            padding-top: 1rem;
+            border-top: 2px solid #000;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="column">
+        <div>
+            <div class="head section">
+                <div class="row">
+                    <div>
+                        <strong class='row-title'>Sharq University</strong><br />
+                    </div>
+                    <div>
+                        <em>2025-2026 o‘quv yili</em>
+                    </div>
+                </div>
+                <div class="head-title">Abituriyent Qayd Varaqasi</div>
+            </div>
+
+            <div class="info section">
+                <div class="section-title">Shaxsiy Ma’lumotlar</div>
+                <div class="grid1">
+                    <% if (photo) { %>
+                    <img class="photo" src="<%= photo %>" alt="photo" />
+                        <% } %>
+                    <div class='about'>
+                        <div class="about-item">
+                            <strong class='label'>ID:</strong>
+                            <span class="value"><%= id || 'Yo‘q' %></span>
+                        </div>
+                        <div class="about-item">
+                            <strong class='label'>F.I.Sh:</strong>
+                            <span class="value"><%= fullName || 'Yo‘q' %></span>
+                        </div>
+                        <div class="about-item">
+                            <strong class='label'>Pasport seriya va raqami:</strong>
+                            <span class="value"><%= passport || 'Yo‘q' %></span>
+                        </div>
+                        <div class="about-item">
+                            <strong class='label'>Tug'ilgan sanasi:</strong>
+                            <span class="value"><%= birthDate || 'Yo‘q' %></span>
+                        </div>
+                        <% if (gender) { %>
+                            <div class="about-item">
+                                <strong class='label'>Jinsi:</strong>
+                                <span class="value"><%= gender %></span>
+                            </div>
+                        <% } %>
+                        <div class="about-item">
+                            <strong class='label'>Telefon raqami:</strong>
+                            <span class="value"><%= phone || 'Yo‘q' %></span>
+                        </div>
+                    </div>
+                    <div class="qr">
+                        <div class="qr-code"></div>
+                        <span>Qabul-2025</span>
+                    </div>
+                </div>
+                <div class="grid2">
+                    <% if (address) { %>
+                    <div class='about-item'>
+                        <strong class='label'>Doimiy yashash manzili:</strong>
+                        <span class="value value2"><%= address || 'Yo‘q' %></span>
+                    </div>
+                        <% } %>
+                    <div class="about-item">
+                        <strong class='label'>Umumta'lim muassasasi:</strong>
+                        <span class="value value2"><%= school || 'Yo‘q' %></span>
+                    </div>
+                    <div class="about-item">
+                        <strong class='label'>Tamomlagan yili:</strong>
+                        <span class="value value2"><%= graduationYear || 'Yo‘q' %></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dir section">
+                <div class="section-title">Tanlangan Ta’lim Yo‘nalishi</div>
+                <table class="edu-table">
+                    <tr>
+                        <th>OTM nomi</th>
+                        <td><%= universityName || 'Yo‘q' %></td>
+                        <td>Imtihon shakli - Test</td>
+                    </tr>
+                    <tr>
+                        <th>Ta’lim shakli</th>
+                        <td><%= eduType || 'Yo‘q' %></td>
+                        <td><%= language || 'Yo‘q' %></td>
+                    </tr>
+                    <tr>
+                        <th>Ta’lim yo‘nalish</th>
+                        <td><%= direction || 'Yo‘q' %></td>
+                        <td><%= exam || 'Yo‘q' %></td>
+                    </tr>
+                    <tr>
+                        <th>Ta’lim tili</th>
+                        <td><%= language || 'Yo‘q' %></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="subs section">
+<!--                <div class="section-title">Imtiyozlar</div>-->
+<!--                <div class="grid">-->
+<!--                    <div>-->
+<!--                        <div class="subs-item">-->
+<!--                            <strong class="label">Sertifikat turi:</strong>-->
+<!--                            <span class="value"><%= privilegeType || 'Yo‘q' %></span>-->
+<!--                        </div>-->
+<!--                        <div class="subs-item">-->
+<!--                            <strong class="label">Ball:</strong>-->
+<!--                            <span class="value"><%= privilegeScore || 'Yo‘q' %></span>-->
+<!--                        </div>-->
+<!--                        <div class="subs-item">-->
+<!--                            <strong class="label">Berilgan sanasi:</strong>-->
+<!--                            <span class="value"><%= privilegeDate || 'Yo‘q' %></span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <div class="subs-item">-->
+<!--                            <strong class="label">Tili:</strong>-->
+<!--                            <span class="value"><%= privilegeLang || 'Yo‘q' %></span>-->
+<!--                        </div>-->
+<!--                        <div class="subs-item">-->
+<!--                            <strong class="label">Seriya raqami:</strong>-->
+<!--                            <span class="value"><%= privilegeSerail || 'Yo‘q' %></span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+
+            <div class="remem section">
+                <div class="section-title">Abituriyentga Eslatma</div>
+                <ol>
+                    <li class="remem-item">Abituriyent ushbu qayd varaqadagi <strong>ma’lumotlarning to‘g‘riligiga shaxsning o‘zi javobgar</strong> hisoblanadi.</li>
+                    <li class="remem-item">Ro'yxatdan o'tish jarayoni yakunlanganidan so'ng abituriyent ma'lumotlarini o'zgartira olmaydi, qayd varaqadagi
+                        ma'lumotlar murojatlari (shikoyatlari) inobatga olinmaydi.</li>
+                </ol>
+                <div class="remem-last">
+                    <div class="title">Ro'yxatga olingan vaqt: <%= registrationTime || 'Yo‘q' %></div>
+                    <div class="title">Arizaning oxirgi taxrirlangan vaqti: <%= updateRegistrationTime || 'Yo‘q' %></div>
+                </div>
+            </div>
+        </div>
+        <%
+        const now = new Date()
+        const uzTime = new Date(now.getTime() + 5 * 60 * 60 * 1000)
+        const pad = n => n.toString().padStart(2, '0')
+        const formatted = `${uzTime.getFullYear()}-${pad(uzTime.getMonth() + 1)}-${pad(uzTime.getDate())} ${pad(uzTime.getHours())}:${pad(uzTime.getMinutes())}`
+        %>
+        <div class="footer">
+            <strong><em>Ko‘chirib olingan vaqt: <%= formatted %></em></strong>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

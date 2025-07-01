@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Qayd varaqasi</title>
+    <style>
+        body {
+            font-family: DejaVu Sans, sans-serif;
+            margin: 0;
+            padding: 40px;
+            font-size: 14px;
+        }
+        .header {
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .col {
+            width: 48%;
+        }
+        .photo {
+            width: 120px;
+            height: 150px;
+            border: 1px solid #000;
+            object-fit: cover;
+        }
+        .label {
+            font-weight: bold;
+        }
+        .value {
+            margin-left: 5px;
+        }
+        .box {
+            border: 1px solid #000;
+            padding: 8px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">RO‘YXATDAN O‘TGANLIK VARAQASI</div>
+
+<div class="row">
+    <div class="col">
+        <div><span class="label">F.I.O:</span><span class="value"><%= fullName || 'Yo‘q' %></span></div>
+        <div><span class="label">Tug‘ilgan sana:</span><span class="value"><%= birthDate || 'Yo‘q' %></span></div>
+        <div><span class="label">Jinsi:</span><span class="value"><%= gender || 'Yo‘q' %></span></div>
+        <div><span class="label">Passport / JSHSHIR:</span><span class="value"><%= passport || 'Yo‘q' %></span></div>
+        <div><span class="label">Telefon:</span><span class="value"><%= phone || 'Yo‘q' %></span></div>
+        <div><span class="label">Fuqaroligi:</span><span class="value"><%= citizenship || 'Yo‘q' %></span></div>
+        <div><span class="label">Manzili:</span><span class="value"><%= address || 'Yo‘q' %></span></div>
+        <div><span class="label">Maktab:</span><span class="value"><%= school || 'Yo‘q' %></span></div>
+        <div><span class="label">Bitirgan yil:</span><span class="value"><%= graduationYear || 'Yo‘q' %></span></div>
+    </div>
+    <div class="col" style="text-align: right;">
+        <% if (photo) { %>
+            <img class="photo" src="<%= photo %>" alt="photo" />
+        <% } else { %>
+            <div class="photo"></div>
+        <% } %>
+    </div>
+</div>
+
+<div class="box">
+    <div><span class="label">Universitet nomi:</span><span class="value"><%= universityName || 'Yo‘q' %></span></div>
+    <div><span class="label">Ta’lim yo‘nalishi:</span><span class="value"><%= direction || 'Yo‘q' %></span></div>
+    <div><span class="label">Ta’lim tili:</span><span class="value"><%= language || 'Yo‘q' %></span></div>
+    <div><span class="label">Imtihon nomi:</span><span class="value"><%= exam || 'Yo‘q' %></span></div>
+    <div><span class="label">Qabul turi:</span><span class="value"><%= privilegeType || 'Yo‘q' %></span></div>
+    <div><span class="label">Imtiyoz tili:</span><span class="value"><%= privilegeLang || 'Yo‘q' %></span></div>
+    <div><span class="label">Imtiyoz balli:</span><span class="value"><%= privilegeScore || 'Yo‘q' %></span></div>
+    <div><span class="label">Imtiyoz sanasi:</span><span class="value"><%= privilegeDate || 'Yo‘q' %></span></div>
+    <div><span class="label">Ro‘yxatdan o‘tgan vaqt:</span><span class="value"><%= registrationTime || 'Yo‘q' %></span></div>
+</div>
+</body>
+</html>

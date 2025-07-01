@@ -1,0 +1,10 @@
+node_modules
+npm-debug.log
+.git
+logs
+dist.tar.gz
+init.bat
+init.sh
+.idea
+dist
+.env

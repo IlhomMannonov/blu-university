@@ -1,0 +1,115 @@
+{
+  "_page": 1,
+  "_links": {
+    "self": {
+      "href": "https://sharquniversity.amocrm.ru/api/v4/leads?id%5B0%5D=51399447&page=1&limit=250"
+    }
+  },
+  "_embedded": {
+    "leads": [
+      {
+        "id": 51399447,
+        "name": "ILHOM MANNONOV",
+        "price": 0,
+        "responsible_user_id": 12520306,
+        "group_id": 0,
+        "status_id": 76852786,
+        "pipeline_id": 9630422,
+        "loss_reason_id": null,
+        "created_by": 0,
+        "updated_by": 12520306,
+        "created_at": 1747846548,
+        "updated_at": 1747849230,
+        "closed_at": null,
+        "closest_task_at": null,
+        "is_deleted": false,
+        "custom_fields_values": [
+          {
+            "field_id": 1816705,
+            "field_name": "Talim Tili",
+            "field_code": null,
+            "field_type": "text",
+            "values": [
+              {
+                "value": "O'zbek"
+              }
+            ]
+          },
+          {
+            "field_id": 1816623,
+            "field_name": "Talim Turi",
+            "field_code": null,
+            "field_type": "text",
+            "values": [
+              {
+                "value": "Bakalavr1"
+              }
+            ]
+          },
+          {
+            "field_id": 1816625,
+            "field_name": "Talim Shakli",
+            "field_code": null,
+            "field_type": "text",
+            "values": [
+              {
+                "value": "Kechki"
+              }
+            ]
+          },
+          {
+            "field_id": 1816627,
+            "field_name": "Talim Yo'nalishi",
+            "field_code": null,
+            "field_type": "text",
+            "values": [
+              {
+                "value": "Iqtisodiyot"
+              }
+            ]
+          },
+          {
+            "field_id": 1816629,
+            "field_name": "O'rta talim tugatgan yili",
+            "field_code": null,
+            "field_type": "date",
+            "values": [
+              {
+                "value": -21600
+              }
+            ]
+          },
+          {
+            "field_id": 1820983,
+            "field_name": "Admission ID",
+            "field_code": null,
+            "field_type": "numeric",
+            "values": [
+              {
+                "value": "21"
+              }
+            ]
+          }
+        ],
+        "score": null,
+        "account_id": 32433038,
+        "labor_cost": null,
+        "_links": {
+          "self": {
+            "href": "https://sharquniversity.amocrm.ru/api/v4/leads/51399447?id%5B0%5D=51399447&page=1&limit=250"
+          }
+        },
+        "_embedded": {
+          "tags": [
+            {
+              "id": 725957,
+              "name": "Qabul Sayt",
+              "color": null
+            }
+          ],
+          "companies": []
+        }
+      }
+    ]
+  }
+}
