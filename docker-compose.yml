@@ -5,7 +5,7 @@ services:
     build: .
     container_name: bxu-university
     ports:
-      - "18080:8080"
+      - "18083:8083"
     env_file:
       - .env
     networks:
